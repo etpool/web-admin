@@ -195,8 +195,10 @@ export default {
 		},
     remember(val) {
       if (val) {
+        localStorage.setItem('username', this.form.username)
         localStorage.setItem('password', this.form.password)
       } else {
+        localStorage.removeItem('username')
         localStorage.removeItem('password')
       }
     }

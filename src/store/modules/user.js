@@ -11,6 +11,7 @@ const user = {
   },
   mutations: {
     logout(state, vm) {
+      const username = localStorage.getItem('username')
       const password = localStorage.getItem('password')
       Cookies.remove('user');
       Cookies.remove('password');
@@ -28,6 +29,7 @@ const user = {
         localStorage.theme = theme;
       }
       if (password) {
+        localStorage.setItem('username', username)
         localStorage.setItem('password', password)
       }
     },
