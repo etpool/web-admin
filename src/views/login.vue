@@ -172,6 +172,7 @@ export default {
 		this.phoneNum = Cookies.get('userPhone');
 		clearInterval(this.timer)
     this.logimg = `${BASICURL}admin/captcha?cid=ADMIN_LOGIN`;
+    this.form.username = localStorage.getItem('username') || ''
     this.form.password = localStorage.getItem('password') || ''
     this.remember = Boolean(localStorage.getItem('password'))
 	},
