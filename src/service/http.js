@@ -1,7 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
 
-export const BASEURL = axios.defaults.baseURL = 'https://admin-api-8bxln7qknu4o0uyx.bihuo.exchange/';
+export const BASEURL = axios.defaults.baseURL = 'http://103.145.191.199:6010/';
 // export const BASEURL = axios.defaults.baseURL = 'http://8.214.101.78:6010/';
 
 export const fetch = (url, params = {}) => {
