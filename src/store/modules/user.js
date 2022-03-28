@@ -11,6 +11,7 @@ const user = {
   },
   mutations: {
     logout(state, vm) {
+      const password = localStorage.getItem('password')
       Cookies.remove('user');
       Cookies.remove('password');
       Cookies.remove('access');
@@ -25,6 +26,9 @@ const user = {
       localStorage.clear();
       if (theme) {
         localStorage.theme = theme;
+      }
+      if (password) {
+        localStorage.setItem('password', password)
       }
     },
     switchBusinessMask(state, bol) {
